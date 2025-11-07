@@ -8,16 +8,24 @@
   <ItemGroup>
     <Reference Include="$(DuckovPath)$(SubPath)TeamSoda.*" />
     <Reference Include="$(DuckovPath)$(SubPath)UniTask.dll*" />
+    <Reference Include="$(DuckovPath)$(SubPath)SodaLocalization.dll*" />
     <Reference Include="$(DuckovPath)$(SubPath)ItemStatsSystem.dll" />
     <Reference Include="0Harmony">
       <HintPath>0Harmony.dll</HintPath>
+    </Reference>
+    <Reference Include="FMODUnity">
+      <HintPath>E:\Steam\steamapps\common\Escape from Duckov\Duckov_Data\Managed\FMODUnity.dll</HintPath>
     </Reference>
     <Reference Include="$(DuckovPath)$(SubPath)Unity*" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="0Harmony.dll" />
+    <None Remove="Electricity.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="0Harmony.dll" />
+    <Resource Include="0Harmony.dll" />
+    <Resource Include="Electricity.mp3">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 </Project>
