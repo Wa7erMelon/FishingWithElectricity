@@ -4,28 +4,22 @@
     <Nullable>enable</Nullable>
     <DuckovPath>E:\Steam\steamapps\common\Escape from Duckov</DuckovPath>
     <SubPath>\Duckov_Data\Managed\</SubPath>
+    <LibPath>.\lib\</LibPath>
+    <UserSecretsId>7ef94532-5519-42f2-bbe6-2073eb0948b8</UserSecretsId>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="$(DuckovPath)$(SubPath)TeamSoda.*" />
     <Reference Include="$(DuckovPath)$(SubPath)UniTask.dll*" />
     <Reference Include="$(DuckovPath)$(SubPath)SodaLocalization.dll*" />
     <Reference Include="$(DuckovPath)$(SubPath)ItemStatsSystem.dll" />
-    <Reference Include="0Harmony">
-      <HintPath>0Harmony.dll</HintPath>
-    </Reference>
+    <Reference Include="$(LibPath)0Harmony.dll" />
+    <Reference Include="$(LibPath)Nett.dll" />
     <Reference Include="FMODUnity">
       <HintPath>E:\Steam\steamapps\common\Escape from Duckov\Duckov_Data\Managed\FMODUnity.dll</HintPath>
     </Reference>
     <Reference Include="$(DuckovPath)$(SubPath)Unity*" />
   </ItemGroup>
   <ItemGroup>
-    <None Remove="0Harmony.dll" />
-    <None Remove="Electricity.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="0Harmony.dll" />
-    <Resource Include="Electricity.mp3">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
+    <EmbeddedResource Include="DefaultConfig.toml" />
   </ItemGroup>
 </Project>

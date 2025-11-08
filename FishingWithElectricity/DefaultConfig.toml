@@ -1,0 +1,19 @@
+﻿[[DamageInfo]]
+DamageValue = 5
+DamageRate = 50
+Text = "哪来的蚊子"
+
+[[DamageInfo]]
+DamageValue = 10
+DamageRate = 35
+Text = "常在河边走，哪有不湿鞋"
+
+[[DamageInfo]]
+DamageValue = 20
+DamageRate = 15
+Text = "货太纯了"
+
+[[DamageInfo]]
+DamageValue = 50
+DamageRate = 1
+Text = "我不可能告诉你任何事情啊啊啊啊啊啊啊"
