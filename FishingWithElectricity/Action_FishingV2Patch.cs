@@ -95,11 +95,14 @@ namespace FishingWithElectricity
 
 		[HarmonyPostfix]
 		[HarmonyPatch("TransToFailBack")]
-		private static void TransToFailBackPatch(Action_FishingV2 __instance)
+		private static void TransToFailBackPatch(Action_FishingV2 __instance, Item ___baitItem)
 		{
-			var (text, damageInfo) = DamageSelector.GetRandomDamageInfo();
-			__instance.characterController.PopText(text);
-			__instance.characterController.Health.Hurt(damageInfo);
+			if (___baitItem.TypeID.Equals(942))
+			{
+				var (text, damageInfo) = DamageSelector.GetRandomDamageInfo();
+				__instance.characterController.PopText(text);
+				__instance.characterController.Health.Hurt(damageInfo);
+			}
 		}
 	}
 }
